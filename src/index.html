@@ -3,77 +3,177 @@
 <head>
   <meta charset="utf-8" />
   <link rel="shortcut icon" href="https://pokemongolive.com/img/icons/favicon.ico"/>
-  <title>Data Lovers</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <script src="https://kit.fontawesome.com/067c579e45.js"></script>
+  <title>Pokémon</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <header>
-    <nav class="main">
-      <div class="content-wrapper">
+  <body>
+
+    <header>
+      <nav class="container">
+        <div>
+          <img class="logo" src="imagenes/logo.jpg" alt="">
+        </div>
+        <ul class="nav_menu">
+          <li class="cont_inicio" id="inicio"><a href="#"> INICIO </a></li>
+          <li class="cont_pokedex" id="pokedex"><a href="#"> POKÉDEX </a></li>
+          <li class="cont_usuarios" id="usuarios"><a href="#"> USUARIOS </a></li>
+        </ul>
+        <label class="btn_menu">
+          <i class="fas fa-bars"></i>
+        </label>
+      </nav>
+    </header>
+
+    
+<!-- INICIO -->
+  <main class=main-inicio id="nav_inicio" style="display: block;">
+    <div  class="inicio">
+      <div class="fila">
+        <div class="columna-2-3">
+          <div class="fila">
+            <div class="columna-60">     
+              <div class="small1" id="img_inicio">
+                <img src="imagenes/información.jpg" alt="" class="galeria_inicio">
+                <p class="texto_inicio">Bienvenidos al mundo POKÉMON, donde encontras a tus amigos pokémon.</p>
+              </div>
+            </div>
+            
+            <div class="columna-40">
+              <div class="small2" id="img_inicio">
+                <img src="imagenes/recomendaciones.jpg" alt="" class="galeria_inicio">
+                <p class="texto_inicio">Evoluciones que tienen antes y después tus pokémon.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="normal" id="img_inicio">
+            <img src="imagenes/top10.jpg" alt="" class="galeria_inicio">
+              <h3 class="texto_inicio2">TOP 10</h3>
+              <p class="texto_inicio">Los pokémon mas poderosos</p>
+          </div>
+        </div>
+
+        <div class="columna-1-3">
+          <div  class="large" id="img_inicio">
+            <img  src="imagenes/serie.jpg" alt="" class="galeria_inicio">
+            <p class="texto_inicio">La temporada 23 del anime de Pokémon vuelve este mes de julio a la plataforma Netflix con un total de 48 episodios con las avenutras de Ash y Goh.</p>
+          </div>
+
+          <div class="small3" id="img_inicio">
+            <img src="imagenes/pelicula.jpg" alt="" class="galeria_inicio">
+              <h3 class="texto_inicio2">Pokémon: Detective Pikachu (2019)</h3>
+              <p class="texto_inicio">Tim y Pikachu inician una aventurada investigación para descubrir el paradero del detective Harry.</p>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </main>
+<!-- POKÉDEX -->
+<main  id="nav_pokedex" style="display: none;">
+  <section>
+    <div>
+      <label>Pokémon: </label>
+      <input type="text" id="pokeName" placeholder="Nombre pokemon o ID" />
+      <button type="button" id="searchPokemon">Buscar</button>
+    </div>
+    <div class="tipospokemon">
+      <h3>Tipo</h3>
+      <div class="tipos">
+        <select id="tipo">
+          <option value="all">Todos</option>
+          <option value="bug">Bicho</option>
+          <option value="dragon">Dragón</option>
+          <option value="electric">Eléctrico</option>
+          <option value="fairy">Hada</option>
+          <option value="fire">Fuego</option>
+          <option value="flying">Volador</option>
+          <option value="ghost">Fantasma</option>
+          <option value="grass">Hierva</option>
+          <option value="ground">Tierra</option>
+          <option value="ice">Hielo</option>
+          <option value="normal">Normal</option>
+          <option value="poison">Veneno</option>
+          <option value="psychic">Psíquico</option>
+          <option value="rock">Roca</option>
+          <option value="steel">Acero</option>
+          <option value="dark">Oscuro</option>
+          <option value="water">Agua</option>
+        </select>
+      </div>
+    </div>
+    <div class="ordenPokemon">
+      <h3>Ordenar</h3>
+      <div class="ordenF">
+        <select id="orden">
+          <option value="ascendente">A-Z</option>
+          <option value="descendente">Z-A</option>
+        </select>
+      </div>
+    </div>
+    <div class="regionP">
+      <h3>Region</h3>
+      <div class="regionPokemon">
+        <select id="region">
+          <option value="kanto">Kanto</option>
+          <option value="johto">Johto</option>
+        </select>
+      </div>
+    </div>
+  </section>
+  <section id="info"></section>
+  <div id="contenedorFicha"></div>
+</main>
+  
+<!-- USUARIOS -->
+  <main class=main-usuarios id="nav_usuarios" style="display: none;">
+    <h1 class="titulo_usuarios"> Nuestros clientes hablan </h1>
+    <div class="usuarios">
+      <div class="usuario">
+      <img src="imagenes/usuario1.jpg">
+      <p class="texto-encima">Esta página esta cool.</p>
+      </div>
+      <div class="usuario">
+        <img src="imagenes/usuario2.jpg">
+        <p class="texto-encima">No creí encontrar una página que tenga todos estos filtros.</p>
+      </div>
+      <div class="usuario">
+        <img src="imagenes/usuario3.jpg">
+        <p class="texto-encima">La página es muy amigable, a mi hijo le gusta.</p>
+      </div>
+    </div>
+  </main>
+<!-- footer -->
+  <footer class="footer">
+    
+    <div class="container_footer">
+      <img class="logo2" src="imagenes/logo.jpg" alt="">
+      <div class="menu_footer">
+        
+      <ul>
+        <li class="quick_items" id="inicio"><a href="#"> INICIO </a></li>
+        <li class="quick_items" id="pokedex"><a href="#"> POKÉDEX </a></li>
+        <li class="quick_items" id="usuarios"><a href="#"> USUARIOS </a></li>
+      </ul>
+      </div>
+      <div class="social_footer">
         <ul>
-          <li><a href="#" >INICIO</a></li>
-          <li><a href="#" id="pokedex" type="button"><button>POKÉDEX</button></a></li>
-          <li><a href="#" >USUARIOS</a></li>
+          <li class="social_items"><a href="https://es-la.facebook.com/PokemonGO/"><i class="fab fa-facebook"></i></a></li>
+          <li class="social_items"><a href="https://twitter.com/pokemongoapp?lang=es"><i class="fab fa-twitter"></i></a></li>
+          <li class="social_items"><a href="https://www.instagram.com/pokemongoapp/?hl=es-la"><i class="fab fa-instagram"></i></a></li>
+          <li class="social_items"><a href="https://www.youtube.com/channel/UCA698bls2pjQyiqP9N-iaeg"><i class="fab fa-youtube"></i></a></li>
+          <li class="social_items"><a href="#"><i class="fab fa-github"></i></a></li>
         </ul>
       </div>
-    </nav>
-  </header>
-  <main>
-    <section class="nombrepokemon">
-      <div class="nombre">
-    <label>Nombre</label>
-    <input type="text" id="buscar"/>
-    <input type="submit" class="button" value="Buscar" id="search" />
-      </div>
-    </section>
-    <section class="tipo-pokemon">   
-      <div class="tipospokemon">
-    <h3>Tipo</h3>
-    <div class="tipos">
-      <select id="tipo">
-        <option value="all">Todos</option>                         
-        <option value="bug">Bicho</option>                           
-        <option value="dragon">Dragón</option>                            
-        <option value="electric">Eléctrico</option>                            
-        <option value="fairy">Hada</option>                            
-        <option value="fire">Fuego</option>                           
-        <option value="flying">Volador</option>                            
-        <option value="ghost">Fantasma</option>                           
-        <option value="grass">Hierva</option>                            
-        <option value="ground">Tierra</option>
-        <option value="ice">Hielo</option>
-        <option value="normal">Normal</option>
-        <option value="poison">Veneno</option>
-        <option value="psychic">Psíquico</option>
-        <option value="rock">Roca</option>
-        <option value="steel">Acero</option>
-        <option value="struggle">Lucha</option>
-        <option value="water">Agua</option>
-      </select>
     </div>
-      <button id="filtrador">filtrar</button>
-      </div>
-    </section>
-    <section class="maspokemon">     
-      <div class="pokémon">
-        <a href="" id="pokémon">
-            <span>Cargar más Pokémon</span>
-        </a>
-      </div>
-    </section>
-    <section id="data"></section>
-  </main>
-  <footer>
-    <div class="footermenu">
-      <ul>
-        <li><a>INICIO</a></li>
-        <li><a>POKÉDEX</a></li>
-        <li><a>USUARIOS</a></li>
-      </ul>
-    </div>
-      <h3>By:Yuliana & Estefany<br>© 2021</h3>
+    <div class="texto_footer">
+    &copy; 2021 LABORATORIA LIM015 | Yuliana & Estefany
+  </div>
   </footer>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
   </body>
 </html>
+

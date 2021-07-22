@@ -1,57 +1,5 @@
-import { filtrar, verRegion, ordenaNombre } from "./data.js";
+import { filtrar, verRegion } from "./data.js";
 import data from "./data/pokemon/pokemon.js";
-
-
-addEventListener('DOMContentLoaded', () => {
-  const btn_menu = document.querySelector('.btn_menu')
-  if (btn_menu) {
-    btn_menu.addEventListener('click', () => {
-      const nav_menu = document.querySelector('.nav_menu')
-      nav_menu.classList.toggle('show')
-    })
-  }
-})
-
-
-// ------------------- BARRA DE NAVEGACIÓN---------------------
-const nav = document.querySelectorAll('.container li');
-document.getElementById('inicio').addEventListener('click', function() { 
-    for(let link of nav){
-        link.classList.remove('linkActivo');
-      }
-      document.getElementById('inicio').classList.add('linkActivo');
-      displayMain('inicio');
-});
-document.getElementById('pokedex').addEventListener('click', function() { 
-    for(let link of nav){
-        link.classList.remove('linkActivo');
-      }
-      document.getElementById('pokedex').classList.add('linkActivo');
-      displayMain('pokedex');
-});
-document.getElementById('usuarios').addEventListener('click', function() { 
-  for(let link of nav){
-      link.classList.remove('linkActivo');
-    }
-    document.getElementById('usuarios').classList.add('linkActivo');
-    displayMain('usuarios');
-});
-const displayMain = (id) => {
-    if (id=='inicio') {
-      document.getElementById('nav_inicio').style.display= 'block';
-      document.getElementById('nav_pokedex').style.display = 'none';
-      document.getElementById('nav_usuarios').style.display= 'none';
-    } else if (id == 'pokedex') {
-      document.getElementById('nav_inicio').style.display= 'none';
-      document.getElementById('nav_pokedex').style.display = 'block';
-      document.getElementById('nav_usuarios').style.display= 'none';
-    } else if (id == 'usuarios'){
-      document.getElementById('nav_inicio').style.display= 'none';
-      document.getElementById('nav_pokedex').style.display = 'none';
-      document.getElementById('nav_usuarios').style.display= 'block';
-    } 
-};
-
 const pokeInfo = data.pokemon;
 function buscarPokemon(pokeInfo) {
   const mostrarPokemon = document.querySelector("#info");
@@ -101,7 +49,7 @@ function buscarPokemon(pokeInfo) {
     let resumen = document.createElement("p");
     resumen.textContent = pokeInfo[i].about;
     let pokeStats = document.createElement("p");
-    pokeStats.textContent = `${pokeInfo[i].stats["base-attack"]}`;
+    pokeStats.textContent = pokeInfo[i].stats;
     seccionContenido.appendChild(nombreP);
     seccionContenido.appendChild(imagenP);
     seccionContenido.appendChild(resumen);
@@ -117,14 +65,6 @@ filtro.addEventListener("change", (event) => {
   const resultado = filtrar(tipoSelec, pokeInfo);
   limpiarPokemon();
   buscarPokemon(resultado);
-});
-//Asignando variable para Ordenar
-const ordenarPokemon = document.getElementById("orden");
-ordenarPokemon.addEventListener("change", (e) => {
-  let ascDesc = e.target.value;
-  const resultadoAsc = ordenaNombre(ascDesc, pokeInfo);
-  limpiarPokemon();
-  buscarPokemon(resultadoAsc);
 });
 //Consultar, debo ingresar al objeto primero
 const region = document.querySelector("#region");
@@ -158,12 +98,3 @@ function buscadorPokemon() {
 document.querySelector("#searchPokemon").addEventListener("click", function () {
   buscadorPokemon();
 });
-// function ordenarPokemon(a,b) {
-//   if(a es menor que b){
-//     return -1;
-//   }
-//   if(a es mayor que b){
-//     return 1;
-//   }
-//   return 0;
-// }

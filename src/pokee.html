@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="shortcut icon"
+      href="https://pokemongolive.com/img/icons/favicon.ico"
+    />
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <ul class="menu_items">
+        <li class="cont_inicio" id="inicio"><a href="#"> INICIO </a></li>
+        <li class="cont_pokedex" id="pokedex"><a href="#"> POKÉDEX </a></li>
+        <li class="cont_usuarios" id="usuarios"><a href="#"> USUARIOS </a></li>
+      </ul>
+      <span class="btn_menu">
+        <i class="fas fa-align-justify"></i>
+      </span>
+    </header>
+    <main>
+      <section>
+        <div>
+          <label>Pokémon: </label>
+          <input type="text" id="pokeName" placeholder="Nombre pokemon o ID" />
+          <button type="button" id="searchPokemon">Buscar</button>
+        </div>
+        <div class="tipospokemon">
+          <h3>Tipo</h3>
+          <div class="tipos">
+            <select id="tipo">
+              <option value="all">Todos</option>
+              <option value="bug">Bicho</option>
+              <option value="dragon">Dragón</option>
+              <option value="electric">Eléctrico</option>
+              <option value="fairy">Hada</option>
+              <option value="fire">Fuego</option>
+              <option value="flying">Volador</option>
+              <option value="ghost">Fantasma</option>
+              <option value="grass">Hierva</option>
+              <option value="ground">Tierra</option>
+              <option value="ice">Hielo</option>
+              <option value="normal">Normal</option>
+              <option value="poison">Veneno</option>
+              <option value="psychic">Psíquico</option>
+              <option value="rock">Roca</option>
+              <option value="steel">Acero</option>
+              <option value="dark">Oscuro</option>
+              <option value="water">Agua</option>
+            </select>
+          </div>
+        </div>
+        <div class="ordenPokemon">
+          <h3>Ordenar</h3>
+          <div class="ordenF">
+            <select id="orden">
+              <option value="ascendente">A-Z</option>
+              <option value="descendente">Z-A</option>
+            </select>
+          </div>
+        </div>
+        <div class="regionP">
+          <h3>Region</h3>
+          <div class="regionPokemon">
+            <select id="region">
+              <option value="kanto">Kanto</option>
+              <option value="johto">Johto</option>
+            </select>
+          </div>
+        </div>
+      </section>
+      <section id="info"></section>
+      <div id="contenedorFicha"></div>
+    </main>
+    <footer>
+      <h3>By:Yuliana & Estefany<br />© 2021</h3>
+    </footer>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
