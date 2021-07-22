@@ -10,6 +10,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: sans-serif;
+  background-color: dimgrey;
   /* background-image: linear-gradient(
     132.6deg,
     rgba(71, 139, 214, 1) 23.3%,
