@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+import { filtrar , ordenaNombre , verRegion } from '../src/data.js';
+=======
 import { ordenaNombre, verRegion, filtrar } from '../src/data.js';
+>>>>>>> 9c2196de336aafb437aae0a2a6c23eb05132f24d
 
 const pokemonMock = {
   pokemon: [
@@ -472,7 +476,24 @@ describe('filtrar', () => {
     expect(filtrar(pokemonMock.pokemon, '')).toEqual(pokemonMock.pokemon);
   });
 
-  it('Filtra los pokemon de tipo fuego', () => {
-    expect(filtrar(pokemonMock.pokemon, 'fire')).toEqual(pokemonType);
-  });
-});
+})
+
+// TEST PARA FILTRO
+
+describe('filtrar', () => {
+
+    it('Es una funcion', () => {
+        expect(typeof filtrar).toBe('function');
+    });
+
+    // it('Deberia filtrar por el tipo de grass', () => {
+    //     const tipoGrass = filtrar ('grass', 'poison', pokemonMock.pokemon);
+    //     expect(tipoGrass[0].type).toEqual('grass','poison');
+    //});
+
+    it('Filtrar por el tipo de pokemon', () => {
+        const tipoPokemon = filtrar ('psychic' , pokemonMock.pokemon);
+        expect(filtrar(pokemonMock.pokemon)).toBe('psychic');
+    });
+
+})
