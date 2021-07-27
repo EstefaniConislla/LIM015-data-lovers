@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { filtrar , ordenaNombre , verRegion } from '../src/data.js';
-=======
 import { ordenaNombre, verRegion, filtrar } from '../src/data.js';
->>>>>>> 9c2196de336aafb437aae0a2a6c23eb05132f24d
 
 const pokemonMock = {
   pokemon: [
