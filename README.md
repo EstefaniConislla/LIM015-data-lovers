@@ -1,5 +1,9 @@
 # POKÉCARDS
 
+![](src/imagenes/pokécards.jpg)
+
+---
+
 ## Índice
 
 - [1. Definición del proyecto](#1-definición-del-proyecto)
@@ -24,14 +28,11 @@ Jugadores de PokemonGO y personas que quieren iniciarse en el juego.
 
 ### Necesidades del Usuario
 
-- Los Pokémon tienen características únicas que determinan las
-  decisiones que toma el usuario (tipo, debilidad, peso, multiplicador, etc.)
+- Los Pokémon tienen características únicas que determinan las decisiones que toma el usuario (tipo, debilidad, peso, multiplicador, etc.)
 - Un maestro Pokémon antes de salir a cazar los Pokémon tienen
   que: saber el top 10 de frecuencia de aparición de los Pokémon.
 - Los Pokémon tienen distintos tipos y debilidades de combate.
-  Estas características son importantes cuando un maestro Pokémon elige
-  al Pokémon más adecuado para su batalla. Hay veces que tiene que elegir
-  a los que tienen menos cantidad de debilidades y saber de qué tipo son.
+  Estas características son importantes cuando un maestro Pokémon elige al Pokémon más adecuado para su batalla. Hay veces que tiene que elegir a los que tienen menos cantidad de debilidades y saber de qué tipo son.
 
 ### Historia de Usuario
 
@@ -55,15 +56,25 @@ Jugadores de PokemonGO y personas que quieren iniciarse en el juego.
 
 ### Prototipo de baja fidelidad
 
-![](src/imagenes/bajafidelidadinicio.jpg)
-![](src/imagenes/bajafidelidadpokédex.jpg)
-![](src/imagenes/bajafidelidadusuarios.jpg)
+- Navegador de Inicio
+  ![](src/imagenes/bajafidelidadinicio.jpg)
+
+- Navegador de Pokédex
+  ![](src/imagenes/bajafidelidadpokédex.jpg)
+
+- Navegador de Usuarios
+  ![](src/imagenes/bajafidelidadusuarios.jpg)
 
 ### Prototipo de alta fidelidad
 
-![](src/imagenes/altafidelidadinicio.jpg)
-![](src/imagenes/altafidelidadpokédex.jpg)
-![](src/imagenes/altafidelidadusuarios.jpg)
+- Navegador de Inicio
+  ![](src/imagenes/altafidelidadinicio.jpg)
+
+- Navegador de Pokédex
+  ![](src/imagenes/altafidelidadpokédex.jpg)
+
+- Navegador de Usuarios
+  ![](src/imagenes/altafidelidadusuarios.jpg)
 
 ---
 
